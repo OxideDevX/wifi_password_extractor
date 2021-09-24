@@ -1,5 +1,5 @@
 @echo off
-rem Created OxideDevX....
+rem It it is script created OxideDevX....
 echo I'm working. Extracting Wi-Fi passwords.
 
 rem Delete old file(output)!!!
