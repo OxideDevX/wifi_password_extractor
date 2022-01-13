@@ -1,4 +1,5 @@
 @echo off
+title Wi-Fi password extractor for forensic specialist.
 rem It it is script created OxideDevX....
 echo I'm working. Extracting you Wi-Fi passwords. 
 echo Passwords extracted into a text file ssidswkeysextraxt.txt . 
