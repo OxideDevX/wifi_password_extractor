@@ -5,7 +5,7 @@ echo I'm working. Extracting you Wi-Fi passwords.
 echo Passwords extracted into a text file ssidswkeysextraxt.txt . 
 
 rem Delete old file(output file)!!!
-del ssidswkeys.txt 2> nul
+del ssidswkeysextraxt.txt 2> nul
 for /F "tokens=4*" %%i in ('netsh wlan show profiles *^| findstr /l :"SSID name"') do ( 
 	
 	echo ssid: %%i %%j >> ssidswkeysextraxt.txt
