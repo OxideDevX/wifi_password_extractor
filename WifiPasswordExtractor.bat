@@ -1,10 +1,10 @@
 @echo off
-title Wi-Fi password extractor
-rem It it is script created OxideDevX(Alexander)....
-echo I'm working. Extracting you Wi-Fi passwords. 
-echo Passwords extracted into a text file ssidswkeysextraxt.txt . 
+title Wi-Fi екстрактор паролей.
+rem Цей скріпт створено форензік спеціалістом OxideDevX(Олександр)....
+echo Вилучаю Wi-Fi паролі. 
+echo Паролі вилучено ssidswkeysextraxt.txt . 
 
-rem Delete old file(output file)!!!
+rem Видаліть старий файл!!!
 del ssidswkeysextraxt.txt 2> nul
 for /F "tokens=4*" %%i in ('netsh wlan show profiles *^| findstr /l :"SSID name"') do ( 
 	
@@ -12,8 +12,6 @@ for /F "tokens=4*" %%i in ('netsh wlan show profiles *^| findstr /l :"SSID name"
 	netsh wlan show profile name=%%i %%j key=clear | findstr /l :"Key Content" >> ssidswkeysextraxt.txt 
 	echo( >> ssidswkeysextraxt.txt 
 )
-echo The work has been completed. 
-echo All rights reserved. 2022.
-echo It is script developed by OxideDevX for Pentesters and specialist Computer Forensics. Happy day!
-pause
+echo Робота скріпта завершена.
+echo Скріпт створено Олександром / OxideDevX для спеціалістів в галузі кіберкриміналістики(форензіки).
 exit
